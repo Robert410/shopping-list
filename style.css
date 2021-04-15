@@ -1,0 +1,382 @@
+body {
+  background: #020631;
+  font: 14px 'Nunito', sans-serif;
+}
+
+.animated.bounceIn, .animated.bounceOut, .animated.flipOutX, .animated.flipOutY {
+  font-size: 13px;
+}
+
+ul{
+  list-style: none;
+}
+
+.container {
+  padding-top: 15px;
+  position: absolute;
+}
+.todo-list {
+  margin: 20px 0;
+}
+.todo-list li {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  position: relative;
+  word-break: break-word;
+}
+.todo-list li.danger {
+  background: rgb(85, 41, 220);
+}
+.todo-list li.danger label {
+  text-decoration: line-through;
+  color: #fff;
+}
+.todo-list li.danger label .checkbox-mask {
+  border-color: transparent;
+}
+.todo-list li.danger label .checkbox-mask:after {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.todo-list li .checkbox {
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.todo-list li label {
+  display: block;
+  padding-right: 10px;
+}
+.todo-list li label input[type="checkbox"] {
+  visibility: hidden;
+}
+.todo-list li label .checkbox-mask {
+  display: block;
+  border: 2px solid #666;
+  width: 12px;
+  height: 12px;
+  border-radius: 2.5px;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px;
+}
+.todo-list li .close {
+  display: none;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  right: 10px;
+  font-size: 16px;
+}
+
+.todo-list li:hover .close {
+  display: block;
+}
+
+.todo-list button .close {
+  display: none;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  right: 10px;
+  font-size: 16px;
+}
+
+
+.todo-list button:hover .close {
+  display: block;
+}
+
+.has-feedback .fa {
+  line-height: 35px;
+  max-width: 5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  display: block;
+  color: #666;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+}
+
+.add-control {
+  margin-top: 20px;
+  position: relative;
+}
+
+.add-control .form-control {
+  padding-right: 25px;
+}
+
+.add-control .refresh {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  font-size: 14px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  margin-right: -10px;
+  cursor: pointer;
+  color: #9da1af;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+}
+.add-control .refresh:hover {
+  color: #666;
+}
+.form-control{
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  background-color: black!important;
+}
+.form-control {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.form-control:focus {
+  
+  color: white;
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.separator {
+  margin: 15px auto;
+  width: 50%;
+  height: 1px;
+
+}
+.animated {
+  -webkit-animation-duration: 0.45s;
+          animation-duration: 0.45s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animated.fast {
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn_wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+button {
+      font-size: 16px;
+      color: #ffffff;
+      background: #fff0;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      outline: none;
+      border-color: #FFF;
+      border-radius: 35px;
+      margin-left: 5px;
+    margin-right: 5px;
+  }
+
+button[disabled] {
+  color: #8d959b !important;
+  background: #fff !important;
+}
+.output {
+  padding-bottom: 10px;
+}
+
+.output button {
+  color: #4b96f0;  
+}
+
+.output :hover,
+:focus {
+  background: transparent;
+}
+
+#start {
+    background: #6200ff;
+    border: none;
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#start:hover {
+
+
+box-shadow: 0 0 25px 0 #452579;
+    color: white;
+}
+
+#reset {
+  color: #e96575;
+}
+
+#reset :hover,
+/* :focus {
+  background-color: #e96575;
+  color: #fff;
+  border-radius: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+} */
+
+p {
+    margin: 15px 0 10px;
+    font-size: 46px;
+    font-weight: 700;
+    color: #FFF;
+
+}
+
+h4 {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px){
+.col-xs-offset-3 {
+    margin-left: 10%;
+}
+}
+
+@media (max-width: 768px){
+.col-xs-6 {
+  width: 80%;
+}
+.container{
+  margin-top: 25rem;
+}
+}
+@viewport {
+  width: device-width; 
+  zoom: 1; 
+}
+
+@media (min-width: 992px){
+.container {
+    width: 100%;
+    max-width: 1150PX;
+}}
+
+@media (max-width: 680px){
+svg {
+    width: 70px;
+    height: 70px;
+
+}}
+
+.todo-list input[type="checkbox"] {
+    opacity: 0;
+}
+
+.bdraddition{
+  border: 0.2rem solid red;
+  border-radius: 15rem;
+  text-align: center;
+}
+
+.spantext{
+  color:white;
+  margin: 1rem;
+}
+.form-control{
+  margin-bottom: 1.5rem!important;
+}
+
+.form-butt{
+  margin-top: -1rem!important;
+}
+button{
+  outline: none!important; 
+}
+button:focus {outline:0!important;}
+
+.totalSum{
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5rem;
+  font-size: 1.75rem;
+  border: 0.2rem solid white;
+  border-radius: 15rem;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

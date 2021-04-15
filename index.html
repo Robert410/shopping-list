@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+
+  <title>list</title>
+  <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="" />
+  <meta charset="UTF-8">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h4 style="text-align: center; color: white;">Click the item to strike it</h4>
+    <h4 style="text-align: center; color: white;">Drag the item to move its position</h4>
+    <h4 style="text-align: center; color: white;">Hover to delete it ( will appear an `x` )</h4>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+        <div class="add-control">
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="✍️ Add a product..." />
+            <input type="text" class="form-control form-desc" placeholder="✍️ Add a description..." />
+            <input type="number" class="form-control form-price" placeholder="✍️ Add the price..." />
+            <span class="spantext">Is it on stock?</span>
+            <!-- <input type="checkbox" class="form-control form-butt" placeholder="✍️ Add description..." /> -->
+            <label class="switch">
+              <input id='switchValue' type="checkbox"class="form-butt">
+              <span class="slider round"></span>
+            </label>
+            <i class="fa fa-plus bdraddition add-btn"></i>
+          </div>
+        </div>
+        <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
+        <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
+        <ul class="todo-list">
+          <li id="0" class="animated flipInX done">
+            <div class="checkbox"><span class="close"><i class="fa fa-times"></i></span><label><span
+                  class="checkbox-mask"></span><input type="checkbox" />Tomatoes </label>Description: so tasty
+                  <span><br>Price: 3</span></div><button id="0"
+              class='btn btn-warning' onclick="summing(this.id)" >In stock</button>
+          </li>
+          <li id="1" class="animated flipInX done">
+            <div class="checkbox"><span  class="close"><i class="fa fa-times"></i></span><label><span
+                  class="checkbox-mask"></span><input type="checkbox" />something </label>Description: meh
+                  <span><br>Price: 12</span></div>
+                  <button id="1"
+                  class="btn btn-warning disabled" style="cursor:default;" onclick="summing(this.id)"
+                  value='disable' disabled>Out of stock</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p id="totalsum" class="totalSum">You have: <br><br><br> And a total of: 0</p>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <script src="js.js"></script>
+</body>
